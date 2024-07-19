@@ -14,38 +14,36 @@ export type Country = {
   flag: string
   isFavorite: boolean
   status: CountryStatus
-  visitedDates: Date[]
+  visitedDates: string[]
 }
 
 interface StoreState {
   countries: Country[]
-  filteredCountries: Country[]
   setCountries: (list: Country[]) => void
-  filterCountries: (query: string) => void
   changeCountryStatus: (id: Country['id'], status: CountryStatus) => void
   favoriteToggle: (id: Country['id']) => void
+  addVisitedDate: (id: Country['id'], date: string) => void
 }
 
 export const useStore = create<StoreState>((set) => ({
   countries: [],
-  filteredCountries: [],
   setCountries: (list: Country[]) => set((state) => ({ countries: list })),
-  filterCountries: (query: string) =>
-    set((state) => ({
-      filteredCountries: state.countries.filter((country) =>
-        country.name.toLowerCase().includes(query.toLowerCase())
-      ),
-    })),
   changeCountryStatus: (id: Country['id'], status: CountryStatus) =>
     set((state) => ({
       countries: state.countries.map((country) =>
         country.id === id ? { ...country, status } : country
       ),
     })),
-    favoriteToggle: (id: Country['id']) =>
+  favoriteToggle: (id: Country['id']) =>
     set((state) => ({
       countries: state.countries.map((country) =>
         country.id === id ? { ...country, isFavorite: !country.isFavorite } : country
+      ),
+    })),
+  addVisitedDate: (id: Country['id'], date: string) =>
+    set((state) => ({
+      countries: state.countries.map((country) =>
+        country.id === id ? { ...country, visitedDates: [...country.visitedDates, date] } : country
       ),
     })),
 }))

@@ -2,8 +2,8 @@
   background: none;
   border: none;
   font-size: 2rem;
-  transition: color 0.3s ease;
-  color: white;
+  transition: 0.3s;
+  color: rgb(202, 202, 202);
 }
 
 .heart.liked {

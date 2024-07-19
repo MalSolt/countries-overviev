@@ -1,5 +1,4 @@
 .container {
-  width: 500px;
   background-color: rgb(224, 242, 255);
   border-radius: 6px;
   padding: 15px;
@@ -16,4 +15,9 @@
 .detailLabel {
   font-weight: bold;
   margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
 }

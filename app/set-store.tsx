@@ -27,5 +27,5 @@ export const SetStore = ({ children }: Props) => {
     })
   }, [])
 
-  return <div className='set-store'>{children}</div>
+  return <div>{children}</div>
 }
