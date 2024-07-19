@@ -1,0 +1,16 @@
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar a.active {
+  font-weight: bold;
+}

@@ -1,0 +1,19 @@
+.container {
+  width: 500px;
+  background-color: rgb(224, 242, 255);
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+}
+
+.detailLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}

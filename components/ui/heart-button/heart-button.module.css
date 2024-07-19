@@ -1,0 +1,21 @@
+.heart {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+  color: white;
+}
+
+.heart.liked {
+  color: red;
+}
+
+.heart:not(.disabled):hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.heart.disabled {
+  cursor: not-allowed;
+  transform: none;
+}
