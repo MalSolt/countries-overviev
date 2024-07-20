@@ -14,7 +14,7 @@ export const VisitedCountries = () => {
       <span>total: {countries.length}</span>
       <Title>Visited countries</Title>
       {sortCountriesByLatestDate(countries).map((elem) => (
-        <CountryCard key={elem.id} {...elem} />
+        <CountryCard key={elem.id} {...elem}  />
       ))}
     </div>
   )

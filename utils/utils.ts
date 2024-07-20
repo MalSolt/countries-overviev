@@ -6,8 +6,8 @@ export const isImgUrl = (value: any): boolean => {
   )
 }
 
-export const sortCountriesByLatestDate = (data: Country[]): Country[] => {
-  return data.sort((a, b) => {
+export const sortCountriesByLatestDate = (list: Country[]): Country[] => {
+  return list.sort((a, b) => {
     const latestDateA = new Date(
       Math.max(...a.visitedDates.map((date) => new Date(date).getTime()))
     )

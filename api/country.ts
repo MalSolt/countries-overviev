@@ -1,4 +1,4 @@
-type Response = {
+type FetchCountriesResponse = {
   name: {
     common: string
     official: string
@@ -20,15 +20,10 @@ type Response = {
   }
 }
 
-export const fetchCountriesData = async (): Promise<Response[]> => {
+export const fetchCountries = async (): Promise<FetchCountriesResponse[]> => {
   const response = await fetch(
     'https://restcountries.com/v3.1/all?fields=name,idd,currencies,capital,flags'
   )
-
-  if (!response.ok) {
-    throw new Error('Failed to fetch data')
-  }
-
-  const data: Response[] = await response.json()
+  const data: FetchCountriesResponse[] = await response.json()
   return data
 }
