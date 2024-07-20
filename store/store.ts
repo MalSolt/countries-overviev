@@ -1,7 +1,6 @@
 import { fetchCountries } from '@/api/country'
 import { nanoid } from 'nanoid'
 import { enqueueSnackbar } from 'notistack'
-import { toast } from 'react-toastify'
 import { create } from 'zustand'
 
 export enum CountryStatus {
