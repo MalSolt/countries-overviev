@@ -1,6 +1,6 @@
 'use client'
 
-import { HeartButton } from '@/components/ui/heart-button/heart-button'
+import { HeartIcon } from '@/components/ui/heart-icon/heart-icon'
 import { Country, useStore } from '@/store/store'
 import { usePathname } from 'next/navigation'
 
@@ -12,5 +12,5 @@ export const FavoriteToggle = ({ id, isFavorite }: Props) => {
   const onClick = () => favoriteToggle(id)
   const disabled = pathname === '/favorite-countries'
 
-  return <HeartButton liked={isFavorite} onClick={onClick} disabled={disabled} />
+  return <HeartIcon liked={isFavorite} onClick={onClick} disabled={disabled} />
 }

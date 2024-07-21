@@ -1,13 +1,5 @@
 .heart {
-  background: none;
-  border: none;
-  font-size: 2rem;
   transition: 0.3s;
-  color: rgb(202, 202, 202);
-}
-
-.heart.liked {
-  color: red;
 }
 
 .heart:not(.disabled):hover {
@@ -17,5 +9,4 @@
 
 .heart.disabled {
   cursor: not-allowed;
-  transform: none;
 }

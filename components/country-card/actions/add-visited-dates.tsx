@@ -20,13 +20,13 @@ export const AddVisitedDates = ({ id, visitedDates }: Props) => {
 
   return (
     <div>
-      <input type='date' value={currentDate} onChange={handleDateChange} />
-      <button onClick={handleAddDate}>Add Date</button>
       <ul>
         {visitedDates.map((date, index) => (
           <li key={index}>{date}</li>
         ))}
       </ul>
+      <input type='date' value={currentDate} onChange={handleDateChange} />
+      <button onClick={handleAddDate}>Add Date</button>
     </div>
   )
 }
