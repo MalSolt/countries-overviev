@@ -1,9 +1,9 @@
 import { Country } from '@/store/store'
 import { ChangeEvent, useMemo, useState } from 'react'
 
-type keyTypes = Pick<Country, 'name' | 'code' | 'currency' | 'capital'>
+type Key = keyof Pick<Country, 'name' | 'code' | 'currency' | 'capital'>
 
-export const useFilterCountries = (countries: Country[], key: keyof keyTypes) => {
+export const useFilterCountries = (countries: Country[], key: Key) => {
   const [value, setValue] = useState('')
 
   const result = useMemo(() => {
